@@ -1,0 +1,36 @@
+diff -urN freesynd-0.7/CMakeLists.txt freesynd-0.7-patched/CMakeLists.txt
+--- freesynd-0.7/CMakeLists.txt	2012-09-29 05:15:24.000000000 +1100
++++ freesynd-0.7-patched/CMakeLists.txt	2013-03-21 20:42:52.424011633 +1100
+@@ -61,7 +61,7 @@
+ 	# We only define an install target if we're doing a release build.
+ 	# Furthermore, on Mac, the data folder is a part of the app bundle.
+ 	if (NOT APPLE)
+-		install (DIRECTORY data DESTINATION share/freesynd PATTERN .svn EXCLUDE)
++		install (DIRECTORY data DESTINATION share/games/freesynd PATTERN .svn EXCLUDE)
+ 	endif ()
+ endif ()
+ 
+diff -urN freesynd-0.7/src/app.cpp freesynd-0.7-patched/src/app.cpp
+--- freesynd-0.7/src/app.cpp	2013-02-04 23:28:45.000000000 +1100
++++ freesynd-0.7-patched/src/app.cpp	2013-03-21 20:41:51.020903933 +1100
+@@ -187,7 +187,7 @@
+                 return false;
+             }
+ #else
+-            ourDataDir = PREFIX"/share/freesynd/data";
++            ourDataDir = PREFIX"/share/games/freesynd/data";
+ #endif
+         }
+         addMissingSlash(ourDataDir);
+diff -urN freesynd-0.7/src/CMakeLists.txt freesynd-0.7-patched/src/CMakeLists.txt
+--- freesynd-0.7/src/CMakeLists.txt	2013-02-26 20:05:00.000000000 +1100
++++ freesynd-0.7-patched/src/CMakeLists.txt	2013-03-21 20:43:05.285034191 +1100
+@@ -200,7 +200,7 @@
+ 	if (APPLE)
+ 		install (TARGETS freesynd DESTINATION /Applications)
+ 	else ()
+-		install (TARGETS freesynd DESTINATION bin)
++		install (TARGETS freesynd DESTINATION games)
+ 	endif ()
+ endif ()
+ 
