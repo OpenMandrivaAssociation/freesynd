@@ -1,6 +1,6 @@
 Name:		freesynd
 Version:	0.7.1
-Release:	1
+Release:	2
 Summary:	Open-source engine for the classic DOS game Syndicate
 Group:		Games/Strategy
 License:	GPLv2
