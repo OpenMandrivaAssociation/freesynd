@@ -6,7 +6,7 @@ Group:		Games/Strategy
 License:	GPLv2
 URL:		http://freesynd.sourceforge.net/
 Source0:	http://sourceforge.net/projects/freesynd/files/%{name}/%{name}-%{version}/%{name}-%{version}.tar.gz
-Patch0:		freesynd-0.7-path.patch
+#Patch0:		freesynd-0.7-path.patch
 BuildRequires:	cmake
 BuildRequires:	imagemagick
 BuildRequires:	pkgconfig(libpng)
@@ -37,7 +37,6 @@ data directory to: %{_gamesdatadir}/%{name}/data/
 
 %prep
 %setup -q
-%patch0 -p1
 for N in 16 32 64 128; do convert icon/sword.png -resize ${N}x${N} $N.png; done
 
 %build
