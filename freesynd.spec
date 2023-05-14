@@ -66,8 +66,8 @@ EOF
 
 %files
 %doc AUTHORS COPYING NEWS README
-#{_gamesbindir}/%{name}
-#{_gamesdatadir}/%{name}
+%{_bindir}/%{name}
+%{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_liconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
