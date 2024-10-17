@@ -4,7 +4,7 @@ Release:	1
 Summary:	Open-source engine for the classic DOS game Syndicate
 Group:		Games/Strategy
 License:	GPLv2
-URL:		http://freesynd.sourceforge.net/
+URL:		https://freesynd.sourceforge.net/
 Source0:	http://sourceforge.net/projects/freesynd/files/%{name}/%{name}-%{version}/%{name}-%{version}.tar.gz
 #Patch0:		freesynd-0.7-path.patch
 BuildRequires:	cmake
