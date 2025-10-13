@@ -1,11 +1,11 @@
 Name:		freesynd
-Version:	0.7.5
+Version:	0.8
 Release:	1
 Summary:	Open-source engine for the classic DOS game Syndicate
 Group:		Games/Strategy
 License:	GPLv2
 URL:		https://freesynd.sourceforge.net/
-Source0:	http://sourceforge.net/projects/freesynd/files/%{name}/%{name}-%{version}/%{name}-%{version}.tar.gz
+Source0:	https://sourceforge.net/projects/freesynd/files/freesynd/freesynd-%{version}/Freesynd-%{version}-Source.zip
 #Patch0:		freesynd-0.7-path.patch
 BuildRequires:	cmake
 BuildRequires:	imagemagick
@@ -36,7 +36,7 @@ WARNING!!! You need original game data to play this game. Copy all files from
 data directory to: %{_gamesdatadir}/%{name}/data/
 
 %prep
-%setup -q
+%autosetup -n Freesynd-%{version}-Source -p1
 for N in 16 32 64 128; do convert icon/sword.png -resize ${N}x${N} $N.png; done
 
 %build
