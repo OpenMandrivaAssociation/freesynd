@@ -37,7 +37,7 @@ data directory to: %{_gamesdatadir}/%{name}/data/
 
 %prep
 %autosetup -n Freesynd-%{version}-Source -p1
-for N in 16 32 64 128; do convert icon/sword.png -resize ${N}x${N} $N.png; done
+#for N in 16 32 64 128; do convert icon/sword.png -resize ${N}x${N} $N.png; done
 
 %build
 %cmake -DCMAKE_BUILD_TYPE=release
